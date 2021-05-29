@@ -37,6 +37,8 @@ module React.Basic.DOM.Events
   , detail
   , screenX
   , screenY
+  , pageX
+  , pageY
   , clientX
   , clientY
   , button
@@ -170,6 +172,12 @@ screenX = unsafeEventFn \e -> toMaybe (unsafeCoerce e).screenX
 
 screenY :: EventFn SyntheticEvent (Maybe Number)
 screenY = unsafeEventFn \e -> toMaybe (unsafeCoerce e).screenY
+
+pageX :: EventFn SyntheticEvent (Maybe Number)
+pageX = unsafeEventFn \e -> toMaybe (unsafeCoerce e).pageX
+
+pageY :: EventFn SyntheticEvent (Maybe Number)
+pageY = unsafeEventFn \e -> toMaybe (unsafeCoerce e).pageY
 
 clientX :: EventFn SyntheticEvent (Maybe Number)
 clientX = unsafeEventFn \e -> toMaybe (unsafeCoerce e).clientX
